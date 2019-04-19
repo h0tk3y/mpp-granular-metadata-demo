@@ -1,10 +1,10 @@
 plugins {
-    kotlin("multiplatform").version("1.3-SNAPSHOT")
+    kotlin("multiplatform").version("1.3.40-dev-1840")
     `maven-publish`
 }
 
 repositories {
-    mavenLocal()
+    maven("https://dl.bintray.com/kotlin/kotlin-dev")
     jcenter()
 }
 

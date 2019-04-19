@@ -1,6 +1,6 @@
 pluginManagement {
     repositories {
-        mavenLocal()
+        maven("https://dl.bintray.com/kotlin/kotlin-dev")
         gradlePluginPortal()
     }
 }
