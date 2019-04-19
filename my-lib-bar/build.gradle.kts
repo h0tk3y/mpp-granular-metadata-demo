@@ -1,12 +1,6 @@
 plugins {
-    kotlin("multiplatform").version("1.3.40-dev-1840")
+    kotlin("multiplatform")
     `maven-publish`
-}
-
-repositories {
-    maven("../repo")
-    maven("https://kotlin.bintray.com/kotlin-dev")
-    jcenter()
 }
 
 group = "com.example.bar"
@@ -21,7 +15,7 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                api("com.example.foo:my-lib-foo:1.0")
+                api(project(":my-lib-foo"))
                 implementation(kotlin("stdlib-common"))
             }
         }
